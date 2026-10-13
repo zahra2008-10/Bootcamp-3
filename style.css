@@ -124,7 +124,7 @@ a {
   opacity: 1;
   left: 89%;
   bottom: 0%;
-  position: sticky;
+  position: fixed;
 }
 
 .logo-slider {
@@ -819,7 +819,7 @@ a {
 .section-6 {
   width: 100%;
   box-sizing: border-box;
-
+  height: 1050px;
   background-color: #043333;
 
   padding: 62px 46px 64px;
@@ -836,12 +836,12 @@ a {
 
   font-family: "Rethink Sans", sans-serif;
 
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
 
   line-height: 1.2;
   letter-spacing: 0.02em;
-
+  margin-left: 155px;
   color: #ffffff;
 }
 
@@ -854,9 +854,9 @@ a {
 
   font-family: "Inter Display", "Inter", sans-serif;
 
-  font-size: 32px;
+  font-size: 45px;
   font-weight: 400;
-
+  margin-left: 155px;
   line-height: 1.08;
   letter-spacing: -0.045em;
 
@@ -870,13 +870,12 @@ a {
 .main-media {
   position: relative;
 
-  width: 100%;
-  height: 205px;
-
-  margin-top: 76px;
-
+  width: 80%;
+  height: 420px;
+  margin: auto;
   overflow: hidden;
 
+  margin-top: 60px;
   border-radius: 7px;
 }
 
@@ -900,13 +899,13 @@ a {
 ================================= */
 
 .media-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.12);
-
-  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: url("video/hero-eco-animation-background-video.mp4") center/cover
+    no-repeat;
 }
 
 /* =================================
@@ -915,43 +914,37 @@ a {
 
 .media-content {
   position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 360px;
 
-  z-index: 2;
-
-  top: 19px;
-  right: 20px;
-
-  width: 34%;
-
-  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .media-content p {
-  margin: 0;
-
-  font-family: "Rethink Sans", sans-serif;
-
-  font-size: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 400;
-
-  line-height: 1.7;
-
-  color: white;
 }
 
 /* Small image */
 
 .media-content img {
   width: 100%;
-  height: 55px;
-
-  margin-top: 14px;
-
-  display: block;
-
+  height: 130px;
+  border-radius: 10px;
   object-fit: cover;
-
-  border-radius: 4px;
 }
 
 /* =================================
@@ -959,15 +952,11 @@ a {
 ================================= */
 
 .container-8 {
-  width: 100%;
+  display: flex;
+  gap: 3rem;
 
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 10px;
-
-  margin-top: 39px;
+  margin-top: 70px;
+  margin-left: 160px;
 }
 
 /* =================================
@@ -975,25 +964,28 @@ a {
 ================================= */
 
 .container-8 .box {
-  height: 120px;
-
-  box-sizing: border-box;
-
-  padding: 13px 11px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  border-radius: 6px;
-
-  background: transparent;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 19%;
+  height: 190px;
+  transition: all 0.3s ease;
+  margin-left: 9 px;
 }
-
+.container-8 .box:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.04);
+}
 /* =================================
    CARD ICON
 ================================= */
 
 .container-8 .box img {
-  width: 20px;
+  width: 26px;
   height: 20px;
 
   object-fit: contain;
@@ -1012,7 +1004,7 @@ a {
 
   font-family: "Rethink Sans", sans-serif;
 
-  font-size: 8px;
+  font-size: 13px;
   font-weight: 500;
 
   line-height: 1.2;
@@ -1029,7 +1021,7 @@ a {
 
   font-family: "Rethink Sans", sans-serif;
 
-  font-size: 6.5px;
+  font-size: 10px;
   font-weight: 400;
 
   line-height: 1.55;
@@ -1040,6 +1032,8 @@ a {
 /* =========================
    MAIN SECTION
 ========================= */
+
+
 
 .statistics {
   width: 100%;
